@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class BasicCalculator
+{
+    public static void main(String[] args_)
+    {
+        boolean start = true;
+        while (start = true)
+        {
+            Scanner input = new Scanner(System.in);
+            System.out.println("Enter your numbers: ");
+            double numFirst = input.nextDouble();
+            double numSecond = input.nextDouble();
+            System.out.println("");
+            System.out.println("What operation would you like to complete? (+,-,*,/)");
+            char operation = input.next().charAt(0);
+            System.out.println("");
+            if (operation == '+')
+            {
+                double addition = numFirst + numSecond;
+                System.out.println(numFirst + " + " + numSecond + " = " + addition);
+            }
+            else if (operation == '-')
+            {
+                double subtraction = numFirst - numSecond;
+                System.out.println(numFirst + " - " + numSecond + " = " + subtraction);
+            }
+            else if (operation == '*')
+            {
+                double multiplication = numFirst * numSecond;
+                System.out.println(numFirst + " * " + numSecond + " = " + multiplication);
+            }
+            else if (operation == '/')
+            {
+                double division = numFirst / numSecond;
+                System.out.println(numFirst + " / " + numSecond + " = " + division);
+            }
+            else
+            {
+                System.out.println("Invalid Operation");
+            }
+        }
+    }
+}
